@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco de Talentos</title>
+    <link rel="stylesheet" href="style2.css">
+    
+    <!-- Firebase App (compatibilidade) -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <!-- Firebase Firestore (compatibilidade) -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+    <!-- Firebase Storage (compatibilidade) -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-storage-compat.js"></script>
+    
+    <!-- Carregar script.js depois dos SDKs do Firebase -->
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="header">
+        <div class="separator"></div>
+        <h1 class="title">Banco de Talentos</h1>
+    </div>
+
+    <div class="container">
+        <div class="search-bar">
+            <input type="text" id="search" placeholder="Pesquisar por nome">
+            <button id="toggleFiltersButton"></button>
+            <button id="addButton">Adicionar Novo Membro</button>
+        </div>
+
+        <div class="welcome-message">
+            <h2>Bem-vindo ao Banco de Talentos</h2>
+            <p>Explore nossos talentos ou adicione um novo membro à equipe.</p>
+        </div>
+
+        <div class="filter-container">
+            <input type="number" id="ageFilter" placeholder="Filtrar por idade">
+            <input type="text" id="courseFilter" placeholder="Filtrar por curso">
+            <input type="text" id="skillsFilter" placeholder="Filtrar por habilidades">
+        </div>
+
+        <div id="formContainer" class="form-container">
+            <h3>Adicionar Novo Membro</h3>
+            <input type="text" id="nameInput" placeholder="Nome e Sobrenome" required>
+            <input type="number" id="ageInput" placeholder="Idade" required>
+            <input type="text" id="skillsInput" placeholder="Habilidades" required>
+            <textarea id="experienceInput" placeholder="Experiências" required></textarea>
+            <input type="text" id="phoneInput" placeholder="Telefone" required>
+            <input type="email" id="emailInput" placeholder="Email" required>
+            <input type="text" id="courseInput" placeholder="Curso" required>
+            <input type="url" id="linkedinInput" placeholder="Link do LinkedIn">
+            <label for="photoInput">Foto (opcional):</label>
+            <input type="file" id="photoInput" accept="image/*">
+            <label for="pdfInput">Currículo (PDF):</label>
+            <input type="file" id="pdfInput" accept="application/pdf">
+            <button onclick="addMember()">Adicionar Membro</button>
+        </div>
+
+        <div id="cardsContainer">
+            <p class="empty-message">Nenhum membro encontrado. Adicione um novo membro para começar.</p>
+        </div>
+    </div>
+</body>
+</html>

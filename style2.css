@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;700&display=swap');
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Titillium Web', sans-serif;
+    background-color: #1b1e25; 
+    background: linear-gradient(to left, #202f3a, #091118);
+    color: #fff; 
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    gap: 15px;
+}
+
+.title {
+    font-size: 12px;
+    font-weight: 500;
+    color: #fff;
+    text-transform: uppercase;
+    white-space: nowrap;
+    order: 1;
+}
+
+.separator {
+    width: 88vw;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.3);
+    order: 2;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 20px 0;
+    gap: 10px;
+}
+
+.search-bar input[type="text"] {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.854);
+    border-radius: 5px;
+    background-color: transparent;
+    color: #fff;
+    font-size: 16px;
+}
+
+/* Botão de filtro com ícone e fundo branco */
+#toggleFiltersButton {
+    background-color: #fff;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    background-image: url('filtro.png');
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+#toggleFiltersButton:hover {
+    background-color: #e0e0e0;
+}
+
+/* Botão de adicionar com fundo branco */
+#addButton {
+    background-color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#addButton:hover {
+    background-color: #e0e0e0;
+}
+
+.welcome-message {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.welcome-message h2 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.welcome-message p {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.empty-message {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 18px;
+    padding: 20px;
+}
+
+.filter-container {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    width: 100%;
+    max-width: 90%;
+}
+
+.filter-container input {
+    padding: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.854);
+    border-radius: 5px;
+    background-color: transparent;
+    color: #fff;
+    font-size: 16px;
+}
+
+.card {
+    border: 1px solid rgba(255, 255, 255, 0.854);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: transparent;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+.card-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    background-color: #444;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.form-container {
+    display: none;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    width: 100%;
+    max-width: 600px;
+    color: #fff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.form-container input, .form-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    background-color: transparent;
+    color: #fff;
+    font-size: 16px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.form-container button {
+    background-color: #2e8b57;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.form-container button:hover {
+    background-color: #3aa36f;
+}
